@@ -22,8 +22,8 @@ def print_links(inspect_url):
             search_str = i.string.encode('utf-8')
             if ("review" in search_str) or ("review" in i['href'].lower()):
                 if is_number(search_str) == False:
-                    link_dict[links_counter] = i['href']
                     links_counter += 1
+                    link_dict[links_counter] = i['href']
                     print str(links_counter) + ") " + search_str
 
 def is_number(s):
